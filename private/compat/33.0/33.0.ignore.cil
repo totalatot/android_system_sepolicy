@@ -70,6 +70,7 @@
     shutdown_checkpoints_system_data_file
     snapuserd_log_data_file
     stats_config_data_file
+    sysfs_disk_stat
     sysfs_fs_fuse_features
     system_net_netd_service
     timezone_metadata_prop
