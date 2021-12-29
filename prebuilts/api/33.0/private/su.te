@@ -1,4 +1,3 @@
-userdebug_or_eng(`
   typeattribute su coredomain;
 
   domain_auto_trans(shell, su_exec, su)
@@ -26,5 +25,3 @@ userdebug_or_eng(`
 
   # Do not audit accesses to keystore2 namespace for the su domain.
   dontaudit su keystore2_key_type:{ keystore2 keystore2_key } *;
-
-')

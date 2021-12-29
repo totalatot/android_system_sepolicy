@@ -554,7 +554,7 @@ func (c *policyBinary) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 		rule.Temporary(permissiveDomains)
 
 		msg := `==========\n` +
-			`ERROR: permissive domains not allowed in user builds\n` +
+			`WARNING: permissive domains not allowed in user builds\n` +
 			`List of invalid domains:`
 
 		rule.Command().Text("if test").
@@ -564,7 +564,7 @@ func (c *policyBinary) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 			Text(`"` + msg + `"`).
 			Text("&& cat ").
 			Input(permissiveDomains).
-			Text("; exit 1; fi")
+			Text("; fi")
 	}
 
 	out := pathForModuleOut(ctx, c.stem())

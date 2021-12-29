@@ -1,4 +1,3 @@
-userdebug_or_eng(`
   typeattribute su coredomain;
 
   domain_auto_trans(shell, su_exec, su)
@@ -32,4 +31,3 @@ userdebug_or_eng(`
 
   # Allow root to set MTE permissive mode.
   set_prop(su, permissive_mte_prop);
-')
